@@ -49,16 +49,19 @@
              <p>Sejam bem-vindo a esse site do Clube De ciências do Colégio Branca da Mota Fernandes. aqui irei postar meu projeto</p>
              <p class="artigo-autor">por: Gabriela</p>
              <button>🌟<span>0</span></button>
+             <button>​🦖​<span>0</span></button>
          </div>
         </main>
 </body>
 <script>
- const botao = document.querySelector("button");
- botao.addEventlistener("click", botaoclicado);
- function botaoclicado(){
+ const botoes = document.querySelectorAll("main button");
+ botoes.forEach (function (botao) {
+ botao.addEventListener("click", botaoClicado);
+ function botaoClicado(){
     console.log("fui clicado");
-    let texton = botton,querySelector("span");
+    let texto = botao.querySelector("span");
     texto.textContent++;
  }
+});
 </script>
 </html>
